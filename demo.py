@@ -1,13 +1,6 @@
-# -----------------------------------------------------------
-# demonstrates to find a word and its occurnce
-# in given input text filefiles using python-
-# (C) 2021 Vipul Sakunia, Bengaluru, India
-# Released under GNU Public License (GPL)
-# email vipul.sakunia@ltts.com
-# -----------------------------------------------------------
-
-
 import re
+
+xas = int(input("enter the no. for words: \n"))
 
 
 class special_character():
@@ -49,8 +42,7 @@ class special_character():
                 file_gen.write(str(self.count) + ' :')
 
         file_gen.write('word repeated:' + str(len(self.wordfinder)) + '\n')
-
-
-obj = special_character()
-obj.input_word()
-obj.creative_file()
+for v in range(xas):
+        obj = special_character()
+        obj.input_word()
+        obj.creative_file()
