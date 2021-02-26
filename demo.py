@@ -14,17 +14,17 @@ class special_character():
         self.n = self.text_file.write(self.new_string)
         self.text_file.close()  # closing the sample file
 
-    def input_word(self):
+def input_word(self):
 
-        self.count = 0
-        self.findword = input("Enter the word:\n")
-        # input for the word to be search
-        pattern = re.compile(self.findword, re.I | re.M)
-        # pattern for the word making it insensitive of the case
-        hand = open(r'sample.txt')
-        handle = hand.read()
-        self.wordfinder = re.findall(pattern, handle)
-        self.file_list = handle.split()  # spliting the handle
+    self.count = 0
+    self.findword = input("Enter the word:\n")
+    # input for the word to be search
+    pattern = re.compile(self.findword, re.I | re.M)
+    # pattern for the word making it insensitive of the case
+    hand = open(r'sample.txt')
+    handle = hand.read()
+    self.wordfinder = re.findall(pattern, handle)
+    self.file_list = handle.split()  # spliting the handle
 
     def creative_file(self):
         create_file = self.findword + '.txt'
@@ -42,7 +42,20 @@ class special_character():
                 file_gen.write(str(self.count) + ' :')
 
         file_gen.write('word repeated:' + str(len(self.wordfinder)) + '\n')
-for v in range(xas):
+'''for v in range(xas):
         obj = special_character()
         obj.input_word()
-        obj.creative_file()
+        obj.creative_file()'''
+
+if __name__=="__main__":
+    string = open(r"input.txt")
+    file_string = string.read()
+    const = int(input("total words  to be searched:"))
+    for m in range(const):
+        findword=input("enter the word u want to seach\n")
+        obj = special_character()
+        final_output = open(create_file, "w")
+        var = obj.occur(wordfinder, file_string)
+        wordfound(var)
+        final_output.close()
+    string.close()
