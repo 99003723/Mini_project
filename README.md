@@ -35,5 +35,10 @@ class special_character():
         obj = special_character()
         obj.input_word()
         obj.creative_file()'''
+        
+        
+        
+        
+       **Program running in both Pycharm and VScode**
 
 
