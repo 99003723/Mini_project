@@ -1,4 +1,4 @@
-# Mini_project
+# Mini_project in word_finder.py
 import re
 #input at a time for multiple entries for word to be searched
 xas = int(input("enter the no. for words: \n"))
@@ -39,6 +39,6 @@ class special_character():
         
         
         
-       **Program running in both Pycharm and VScode**
+       **Program running in both Pycharm and VScode(word_finder.py)**
 
 
